@@ -1,6 +1,6 @@
 {
   "name": "github-pr-slack",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "private": true,
   "description": "Copy GitHub PRs for Slack with a linked PR number and plain title.",
   "scripts": {
