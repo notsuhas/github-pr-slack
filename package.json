@@ -4,7 +4,7 @@
   "private": true,
   "description": "Copy GitHub PRs for Slack with a linked PR number and plain title.",
   "scripts": {
-    "test": "node --test tests/*.test.cjs",
+    "test": "node --test tests/*.test.cjs && python3 -m unittest discover -s tests -p '*_test.py'",
     "package": "python3 scripts/package.py"
   }
 }

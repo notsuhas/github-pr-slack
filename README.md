@@ -35,4 +35,10 @@ npm test
 npm run package
 ```
 
-The package command creates `dist/github-pr-slack-v1.1.0.zip`. After editing, reload the extension at `chrome://extensions` and refresh GitHub.
+The package command creates `dist/github-pr-slack-v<version>.zip`. After editing, reload the extension at `chrome://extensions` and refresh GitHub.
+
+## Releases
+
+Every push to `main` runs the tests, creates a version tag, and publishes an installable ZIP in [GitHub Releases](https://github.com/notsuhas/github-pr-slack/releases/latest). PRs run tests only.
+
+The patch number increases automatically. Set a higher version in the extension manifest for a minor or major release. The tag includes matching manifest and package versions; the workflow leaves `main` untouched. Re-running a failed workflow reuses its tag and replaces the ZIP instead of creating another version.
