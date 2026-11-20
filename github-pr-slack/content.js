@@ -11,7 +11,7 @@
       existing?.remove();
       return;
     }
-    const heading = document.querySelector('h1:has(.markdown-title), h1:has(.js-issue-title), h1:has([data-testid="issue-title"]), .gh-header-title');
+    const heading = document.querySelector('h1:has([class*="markdownTitle"]), h1:has(.markdown-title), h1:has(.js-issue-title), h1:has([data-testid="issue-title"]), .gh-header-title');
     if (!heading || existing) return;
     const button = document.createElement('button');
     button.id = id;

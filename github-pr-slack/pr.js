@@ -25,7 +25,7 @@ globalThis.PRSlack = (() => {
   function read() {
     const match = location.pathname.match(/^\/[^/]+\/[^/]+\/pull\/(\d+)(?:\/|$)/);
     if (!match) return null;
-    const titleElement = document.querySelector('h1 .js-issue-title, h1 [data-testid="issue-title"], h1 .markdown-title, .gh-header-title .js-issue-title');
+    const titleElement = document.querySelector('h1 [class*="markdownTitle"], h1 .js-issue-title, h1 [data-testid="issue-title"], h1 .markdown-title, .gh-header-title .js-issue-title');
     const suffix = ` · Pull Request #${match[1]} · `;
     const title = titleElement?.textContent || (document.title.includes(suffix) ? document.title.split(suffix)[0].replace(/ by \S+$/, '') : '');
     return format(location.href, title);
